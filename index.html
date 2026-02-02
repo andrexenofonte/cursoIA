@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IA para Médicos | Curso Hands-On</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+        .gradient-bg { background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); }
+        .forms-container {
+            position: relative;
+            width: 100%;
+            height: 900px;
+            overflow: hidden;
+        }
+        .forms-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900">
+
+    <!-- Header/Hero -->
+    <header class="gradient-bg text-white pb-20 pt-10">
+        <nav class="container mx-auto px-6 flex justify-between items-center mb-16">
+            <div class="text-2xl font-bold tracking-tight">IA<span class="text-blue-400">MED</span></div>
+            <div class="hidden md:flex space-x-8 text-sm font-medium">
+                <a href="#sobre" class="hover:text-blue-400 transition">Sobre</a>
+                <a href="#cronograma" class="hover:text-blue-400 transition">Conteúdo</a>
+                <a href="#inscricao" class="bg-blue-500 px-4 py-2 rounded-lg hover:bg-blue-600 transition">Inscreva-se</a>
+            </div>
+        </nav>
+
+        <div class="container mx-auto px-6 text-center md:text-left md:flex items-center">
+            <div class="md:w-1/2">
+                <span class="bg-blue-500/20 text-blue-300 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider">Curso 100% Prático</span>
+                <h1 class="text-4xl md:text-6xl font-extrabold mt-6 leading-tight">
+                    Domine a Inteligência Artificial na Prática Médica.
+                </h1>
+                <p class="mt-6 text-lg text-slate-300 max-w-xl">
+                    Do zero ao intermediário/avançado. Um workshop hands-on para médicos que querem otimizar o tempo e focar no que importa: o paciente.
+                </p>
+                <div class="mt-10 flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="#inscricao" class="bg-blue-500 text-white px-8 py-4 rounded-xl font-bold text-center hover:bg-blue-600 transition shadow-lg shadow-blue-500/25">
+                        Quero me inscrever
+                    </a>
+                    <a href="#cronograma" class="border border-slate-600 px-8 py-4 rounded-xl font-bold text-center hover:bg-slate-700 transition">
+                        Ver Cronograma
+                    </a>
+                </div>
+            </div>
+            <div class="md:w-1/2 mt-12 md:mt-0 flex justify-center">
+                <div class="relative w-72 h-72 md:w-96 md:h-96">
+                    <div class="absolute inset-0 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse"></div>
+                    <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&q=80&w=1000" alt="Médico usando tecnologia" class="rounded-2xl shadow-2xl relative z-10 object-cover w-full h-full">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Info Cards -->
+    <section id="sobre" class="container mx-auto px-6 -mt-10">
+        <div class="grid md:grid-cols-3 gap-6">
+            <div class="bg-white p-8 rounded-2xl shadow-xl flex items-start space-x-4 border border-slate-100">
+                <div class="bg-blue-100 p-3 rounded-lg text-blue-600"><i class="fas fa-calendar-alt fa-lg"></i></div>
+                <div>
+                    <h3 class="font-bold">Quando?</h3>
+                    <p class="text-slate-500 text-sm">07 de Março (Sábado)<br>Das 08h às 12h</p>
+                </div>
+            </div>
+            <div class="bg-white p-8 rounded-2xl shadow-xl flex items-start space-x-4 border border-slate-100">
+                <div class="bg-green-100 p-3 rounded-lg text-green-600"><i class="fas fa-laptop-code fa-lg"></i></div>
+                <div>
+                    <h3 class="font-bold">Formato</h3>
+                    <p class="text-slate-500 text-sm">Hands-on presencial<br>Traga seu notebook</p>
+                </div>
+            </div>
+            <div class="bg-white p-8 rounded-2xl shadow-xl flex items-start space-x-4 border border-slate-100">
+                <div class="bg-purple-100 p-3 rounded-lg text-purple-600"><i class="fas fa-map-marker-alt fa-lg"></i></div>
+                <div>
+                    <h3 class="font-bold">Local</h3>
+                    <p class="text-slate-500 text-sm">INBEC - R. Joaquim Nabuco, 2906<br>Dionísio Torres</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cronograma -->
+    <section id="cronograma" class="py-24 container mx-auto px-6">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold">Cronograma do Curso</h2>
+            <p class="text-slate-500 mt-4 max-w-2xl mx-auto">Uma manhã intensiva focada em ferramentas que você começará a usar no consultório já na segunda-feira.</p>
+        </div>
+        
+        <div class="max-w-4xl mx-auto space-y-6">
+            <!-- Módulo 1 -->
+            <div class="flex items-start space-x-6 border-l-4 border-blue-500 pl-6 py-5 bg-white rounded-r-2xl shadow-sm border border-slate-100">
+                <span class="font-bold text-blue-600 w-24 shrink-0 mt-1">08h – 09h</span>
+                <div>
+                    <h4 class="font-bold text-lg">Introdução às Ferramentas Essenciais</h4>
+                    <p class="text-slate-600 text-sm mt-1 leading-relaxed">Configuração e uso prático: Chat GPT, Gemini e Notebook LM. Como criar sua própria base de conhecimento médico segura.</p>
+                </div>
+            </div>
+
+            <!-- Módulo 2 -->
+            <div class="flex items-start space-x-6 border-l-4 border-blue-400 pl-6 py-5 bg-white rounded-r-2xl shadow-sm border border-slate-100">
+                <span class="font-bold text-blue-500 w-24 shrink-0 mt-1">09h – 09:30h</span>
+                <div>
+                    <h4 class="font-bold text-lg">IA para Pesquisas Clínicas</h4>
+                    <p class="text-slate-600 text-sm mt-1 leading-relaxed">Explorando Open Evidence e Consensus. Como obter respostas baseadas em artigos científicos em segundos, otimizando decisões clínicas.</p>
+                </div>
+            </div>
+
+            <!-- Módulo 3 -->
+            <div class="flex items-start space-x-6 border-l-4 border-blue-300 pl-6 py-5 bg-white rounded-r-2xl shadow-sm border border-slate-100">
+                <span class="font-bold text-blue-400 w-24 shrink-0 mt-1">09:30h – 10h</span>
+                <div>
+                    <h4 class="font-bold text-lg">Scribe: Automação de Prontuários</h4>
+                    <p class="text-slate-600 text-sm mt-1 leading-relaxed">Uso de IA para transcrição e estruturação automática de consultas. Ganhe tempo e melhore a qualidade dos seus registros.</p>
+                </div>
+            </div>
+
+            <!-- Intervalo -->
+            <div class="flex items-center space-x-6 border-l-4 border-amber-400 pl-6 py-4 bg-amber-50 rounded-r-2xl">
+                <span class="font-bold text-amber-600 w-24 shrink-0">10h – 10:30h</span>
+                <div class="flex items-center space-x-2">
+                    <i class="fas fa-coffee text-amber-600"></i>
+                    <h4 class="font-bold text-amber-800 italic uppercase text-sm tracking-widest">Coffee Break & Networking</h4>
+                </div>
+            </div>
+
+            <!-- Estações Práticas -->
+            <div class="flex items-start space-x-6 border-l-4 border-green-500 pl-6 py-5 bg-white rounded-r-2xl shadow-sm border border-slate-100">
+                <span class="font-bold text-green-600 w-24 shrink-0 mt-1">10:30h – 12h</span>
+                <div>
+                    <h4 class="font-bold text-lg">Estações Práticas (Mão na Massa)</h4>
+                    <p class="text-slate-600 text-sm mt-1 mb-4 leading-relaxed">Aplicação real dos conhecimentos com suporte individual dos instrutores:</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="flex items-center space-x-3 p-3 bg-slate-50 rounded-xl border border-slate-100">
+                            <i class="fas fa-desktop text-green-500"></i>
+                            <span class="text-sm font-medium">Slides e aulas automáticas</span>
+                        </div>
+                        <div class="flex items-center space-x-3 p-3 bg-slate-50 rounded-xl border border-slate-100">
+                            <i class="fas fa-file-medical text-green-500"></i>
+                            <span class="text-sm font-medium">Relatórios e Laudos Estruturados</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Inscrição -->
+    <section id="inscricao" class="py-24 bg-slate-100 border-t border-slate-200">
+        <div class="container mx-auto px-6">
+            <!-- Título e Preço Centralizados -->
+            <div class="max-w-4xl mx-auto text-center mb-12">
+                <h2 class="text-4xl font-bold mb-4">Inscrição Oficial</h2>
+                <p class="text-slate-600 mb-8">Preencha o formulário abaixo e realize o pagamento para garantir sua vaga.</p>
+                
+                <div class="inline-flex flex-col md:flex-row items-center bg-white p-5 rounded-3xl shadow-lg border border-slate-200 space-y-4 md:space-y-0 md:space-x-10">
+                    <div class="flex flex-col items-center md:items-start">
+                        <span class="text-slate-400 line-through text-xs uppercase font-bold tracking-tighter">De R$ 600 por</span>
+                        <span class="text-3xl font-extrabold text-blue-600">R$ 300,00</span>
+                    </div>
+                    <div class="h-10 w-px bg-slate-200 hidden md:block"></div>
+                    <div class="grid grid-cols-3 gap-6">
+                        <span class="flex flex-col items-center text-[10px] font-bold text-slate-500 uppercase"><i class="fas fa-check text-green-500 mb-1"></i> WhatsApp</span>
+                        <span class="flex flex-col items-center text-[10px] font-bold text-slate-500 uppercase"><i class="fas fa-check text-green-500 mb-1"></i> Materiais</span>
+                        <span class="flex flex-col items-center text-[10px] font-bold text-slate-500 uppercase"><i class="fas fa-check text-green-500 mb-1"></i> Certificado</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Container do Formulário -->
+            <div class="max-w-5xl mx-auto bg-white rounded-3xl overflow-hidden shadow-2xl border border-slate-200">
+                <div class="p-4 bg-slate-50 border-b flex justify-between items-center px-6">
+                    <span class="text-sm font-bold text-slate-700">
+                        <i class="fab fa-google text-blue-500 mr-2"></i> ETAPA 1: Dados do Aluno
+                    </span>
+                    <a href="#pagamento" class="text-xs bg-blue-100 text-blue-700 px-4 py-2 rounded-full font-bold hover:bg-blue-200 transition">
+                        Já preenchi? Ir para o PIX
+                    </a>
+                </div>
+                <div class="forms-container">
+                    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe0k96ziRCp6Q-hPW2YwdFtyIUbCm14_-Y_lDxT0VGrFiD9rw/viewform?embedded=true">Carregando…</iframe>
+                </div>
+            </div>
+
+            <!-- Área de Pagamento Atualizada (Sem QR Code) -->
+            <div id="pagamento" class="max-w-5xl mx-auto mt-12 bg-green-50 border-2 border-dashed border-green-200 rounded-3xl p-8 md:p-16 text-center">
+                <div class="max-w-2xl mx-auto">
+                    <h3 class="text-3xl font-bold text-green-800 mb-4 uppercase tracking-tight">ETAPA 2: Pagamento PIX</h3>
+                    <p class="text-slate-600 mb-10">Após clicar em "Enviar" no formulário acima, conclua sua inscrição utilizando a chave PIX abaixo.</p>
+                    
+                    <div class="bg-white p-10 rounded-3xl shadow-sm border border-green-100 text-center md:text-left">
+                        <div class="flex flex-col space-y-6">
+                            <div>
+                                <h4 class="text-xs font-bold text-slate-400 uppercase mb-2 tracking-widest">Favorecido</h4>
+                                <p class="text-lg font-bold text-slate-800">SAMPAIO & GOMES SERVICOS DE SAUDE LTDA</p>
+                            </div>
+                            
+                            <div>
+                                <h4 class="text-xs font-bold text-slate-400 uppercase mb-2 tracking-widest">Chave PIX (CNPJ)</h4>
+                                <div class="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-4">
+                                    <p class="text-xl font-mono font-bold text-slate-800 break-all bg-slate-50 p-4 rounded-xl flex-1 border border-slate-100 text-center md:text-left">
+                                        45.610.513/0001-52
+                                    </p>
+                                    <button onclick="copyPix()" class="w-full md:w-auto bg-green-600 text-white px-8 py-4 rounded-xl font-bold hover:bg-green-700 transition shadow-lg shadow-green-600/20 flex items-center justify-center space-x-3 whitespace-nowrap">
+                                        <i class="fas fa-copy"></i>
+                                        <span>COPIAR CHAVE</span>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="pt-6 border-t border-slate-100 flex items-center justify-center md:justify-start space-x-3 text-slate-500">
+                                <i class="fas fa-envelope text-blue-500"></i>
+                                <span class="text-xs leading-tight">Envie o comprovante para: <br><strong>andrexenofonte@gmail.com</strong></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-500 py-16 text-center text-sm">
+        <div class="container mx-auto px-6">
+            <div class="mb-6 text-2xl font-bold tracking-tight text-white">IA<span class="text-blue-400">MED</span></div>
+            <p>&copy; 2025 IAMED - Inteligência Artificial para Médicos.</p>
+            <p class="mt-4 text-slate-400 italic">Local: INBEC - R. Joaquim Nabuco, 2906 - Dionísio Torres, Fortaleza/CE</p>
+            <div class="mt-8 flex justify-center space-x-6 text-slate-400">
+                <a href="mailto:andrexenofonte@gmail.com" class="hover:text-white transition">Suporte</a>
+                <a href="#" class="hover:text-white transition">Termos</a>
+                <a href="#" class="hover:text-white transition">Privacidade</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function copyPix() {
+            const pixKey = "45610513000152"; 
+            const dummy = document.createElement("input");
+            document.body.appendChild(dummy);
+            dummy.value = pixKey;
+            dummy.select();
+            document.execCommand("copy");
+            document.body.removeChild(dummy);
+            alert("Chave PIX (CNPJ) copiada com sucesso!");
+        }
+    </script>
+</body>
+</html>
